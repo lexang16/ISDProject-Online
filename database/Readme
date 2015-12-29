@@ -4,8 +4,5 @@ idea:
 -Every device register itself and a new entry in the database is created
 -General information such as location, user, devicenumber (mac) are saved
 -Each installed Sensor on the device is listed
--measuredata is saved
-
-Questions:
--Meaning of the migration table?
--Where to save measured values?
+-Measuredata is saved
+-Migration table for versioncontrol of database(Laravel)
