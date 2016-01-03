@@ -17,7 +17,7 @@ class CreateGenericSensorsTable extends Migration
             $table->string("name");
             $table->string("alias", 60);
             $table->string("unit", 10);
-            $table->timestamps();
+            $table->nullableTimestamps();
         });
     }
 

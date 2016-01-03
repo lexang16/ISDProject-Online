@@ -20,9 +20,9 @@ class CreateLocationsTable extends Migration
             $table->string("country_code", 2);
             $table->integer("user_id")->unsigned();
             $table->foreign("user_id")->references("id")->on("users");
+            // we create this "link" ourselves
             $table->string("product_id");
-//            $table->foreign("product_id")->references("product_id")->on("sensors");
-            $table->timestamps();
+            $table->nullableTimestamps();
         });
     }
 

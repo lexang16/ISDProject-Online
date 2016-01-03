@@ -17,7 +17,7 @@ class CreateSamplingsTable extends Migration
             $table->integer("sensor_id")->unsigned();
             $table->foreign("sensor_id")->references("id")->on("sensors");
             $table->integer("sampled");
-            $table->timestamp("created_at");
+            $table->timestamp("created_at")->nullable();
         });
     }
 

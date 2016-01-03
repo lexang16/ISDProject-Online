@@ -19,7 +19,7 @@ class CreateSensorsTable extends Migration
             // Every bubble will be configured with a unique "product id", that the user
             // will register
             $table->string("product_id", 40);
-            $table->timestamps();
+            $table->nullableTimestamps();
         });
     }
 
