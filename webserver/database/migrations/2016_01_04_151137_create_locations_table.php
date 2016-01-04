@@ -22,6 +22,7 @@ class CreateLocationsTable extends Migration
             $table->foreign("user_id")->references("id")->on("users");
             // we create this "link" ourselves
             $table->string("product_id");
+            $table->foreign("product_id")->references("id")->on("products");
             $table->nullableTimestamps();
         });
     }
