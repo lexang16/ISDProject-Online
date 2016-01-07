@@ -14,8 +14,17 @@ class DatabaseSeeder extends Seeder
     {
         Model::unguard();
 
-        // $this->call(UserTableSeeder::class);
-
+        // Create Elivs entry
+         $this->call(UserTableSeeder::class);
+		 
+		 //Create needed sensor types
+		 $this->call(GenericSensorTableSeeder::class);
+		 
+		 //Create 50 entries for testing with help function and ModelFactory 
+		 factory(App\User::class, 50)->create()->each(function($u) {
+        $u->posts()->save(factory(App\Post::class)->make());
+        });
+    
         Model::reguard();
     }
 }
