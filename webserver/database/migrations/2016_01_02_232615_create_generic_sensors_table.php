@@ -14,9 +14,11 @@ class CreateGenericSensorsTable extends Migration
     {
         Schema::create('generic_sensors', function (Blueprint $table) {
             $table->increments('id');
+            $table->string("alias", 60); //like: Temperature or Acceleration
             $table->string("name");
-            $table->string("alias", 60);
+            $table->string("symbol", 10);
             $table->string("unit", 10);
+            $table->string("producer", 60);
             $table->nullableTimestamps();
         });
     }
